@@ -14,16 +14,16 @@ export default function ReconStatusTable() {
 
    useEffect(() => {
       setIsLoading(true)
-      const fetchData = async () => {
+      const getRecons = async () => {
          const { data } = await getReconStatusApi()
          setTableRows(data)
       }
 
-      fetchData().finally(() => setIsLoading(false))
+      getRecons().finally(() => setIsLoading(false))
    }, [])
 
    return (
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ maxHeight: '75vh' }}>
          <Table dense>
             <TableHead>
                <TableRow>
@@ -34,6 +34,7 @@ export default function ReconStatusTable() {
                   ))}
                </TableRow>
             </TableHead>
+
             <TableBody>
                {tableRows.length > 0 && tableRows.map((row, index) => (
                   <TableRow key={index} sx={styles.tableRow}>

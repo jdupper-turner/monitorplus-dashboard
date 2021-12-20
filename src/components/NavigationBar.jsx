@@ -7,7 +7,7 @@ import dayjs from 'dayjs'
 const NavigationBar = () => {
    return (
       <Fragment>
-         <AppBar position='static'>
+         <AppBar position='sticky'>
             <Toolbar>
                <Typography sx={{ flexGrow: 1 }}>
                   MonitorPlus Dashboard
