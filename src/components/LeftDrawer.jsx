@@ -27,8 +27,6 @@ const LeftDrawer = () => {
       }
    })
 
-   console.log(isLoading, networks)
-
    return (
       <Fragment key={anchor}>
          {/* toggle */}

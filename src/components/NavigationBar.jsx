@@ -26,7 +26,11 @@ const CurrentTime = () => {
 
    return (
       <Fragment>
-         <AccessTime /> &nbsp; {dayjs(now).format('dddd, MMMM DD YYYY, HH:mm:ss')}
+         <AccessTime />
+         &nbsp;
+         <Typography>
+            {dayjs(now).format('dddd, MMMM DD YYYY, HH:mm:ss')}
+         </Typography>
       </Fragment>
    )
 }
